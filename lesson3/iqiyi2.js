@@ -73,7 +73,6 @@ superagent.get(root_url).end(function (err, res) {
                         console.log(new_item)
                     })
                 })
-                // var count_url = 'http://cache.video.qiyi.com/jp/pc/627605800,624048500,622875900,619820000,618760300,615889900,612105500,606890700,602484500,598585000,591068900/'
                 return new_item
             } else {
                 return {}
