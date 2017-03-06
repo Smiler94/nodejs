@@ -12,7 +12,8 @@ superagent.get(root_url).end(function (err, res) {
         {title : '食在囧途', url: 'http://www.iqiyi.com/a_19rrha0p9x.html'},
         {title : '笑星闯地球', url: 'http://www.iqiyi.com/a_19rrha2twp.html'},
         {title : '熟悉的味道', url: 'http://www.iqiyi.com/a_19rrh94xyt.html'},
-        {title : '跨界冰雪王', url: 'http://www.iqiyi.com/a_19rrha2i0t.html'}
+        {title : '跨界冰雪王', url: 'http://www.iqiyi.com/a_19rrha2i0t.html'},
+        // {title : '歌手', url: 'http://www.iqiyi.com/v_19rraakn18.html'}
     ]
 
     $('.classes-blcoks').eq(2).find('a').each(function (idx, element) {
