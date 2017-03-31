@@ -4,7 +4,9 @@ var cheerio = require('cheerio')
 var urls = [
     'http://www.iqiyi.com/v_19rraakn18.html',
     'http://www.iqiyi.com/v_19rraa904k.html',
-    'http://www.iqiyi.com/v_19rraaoqx0.html'
+    'http://www.iqiyi.com/v_19rraaoqx0.html',
+    'http://www.iqiyi.com/v_19rrag3q2g.htmll',
+    'http://www.iqiyi.com/v_19rrag35ec.html'
 ]
 urls.forEach(function(url){
     superagent.get(url).end(function (err, res) {
