@@ -1,6 +1,6 @@
 var superagent = require('superagent')
 var cheerio = require('cheerio')
-
+console.log('腾讯视频:')
 var urls = [
     'https://v.qq.com/x/cover/kruhigtunugwbab/x0023osxaj9.html',//最强大脑
     'https://v.qq.com/x/cover/4n8r5plkg2t1sb5/v0022zox2oi.html',

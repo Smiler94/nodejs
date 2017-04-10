@@ -2,11 +2,21 @@ var superagent = require('superagent')
 var cheerio = require('cheerio')
 
 var urls = [
-    'http://www.iqiyi.com/v_19rraakn18.html',
-    'http://www.iqiyi.com/v_19rraa904k.html',
-    'http://www.iqiyi.com/v_19rraaoqx0.html',
-    'http://www.iqiyi.com/v_19rrag3q2g.htmll',
-    'http://www.iqiyi.com/v_19rrag35ec.html'
+    'http://www.iqiyi.com/v_19rraakn18.html',//歌手
+    'http://www.iqiyi.com/v_19rraa904k.html',//奇葩大会
+    'http://www.iqiyi.com/v_19rraaoqx0.html',//爱in思谈
+    'http://www.iqiyi.com/v_19rrag3q2g.htmll',//饭饭男友
+    'http://www.iqiyi.com/v_19rrag35ec.html',//吃光全宇宙
+    'http://www.iqiyi.com/v_19rrb49n7o.html',//跨界冰雪王
+    'http://www.iqiyi.com/v_19rrb6lu48.html',//最强大脑
+    'http://www.iqiyi.com/v_19rrb57vxw.html',//王牌对王牌
+    'http://www.iqiyi.com/v_19rrb58lh4.html',//二十四小时
+    'http://www.iqiyi.com/v_19rrb4gvyw.html',//熟悉的味道
+    'http://www.iqiyi.com/v_19rrb58ehk.html',//越野千里
+    'http://www.iqiyi.com/v_19rrb490es.html',//闪亮的爸爸
+    'http://www.iqiyi.com/v_19rrb46nvs.html',//奇葩说
+    'http://www.iqiyi.com/v_19rrb49384.html',//高能少年团
+    'http://www.iqiyi.com/v_19rrb49gmw.html',//天生是优我
 ]
 urls.forEach(function(url){
     superagent.get(url).end(function (err, res) {
