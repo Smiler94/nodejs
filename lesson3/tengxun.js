@@ -1,6 +1,6 @@
 var superagent = require('superagent')
 var cheerio = require('cheerio')
-console.log('腾讯视频:')
+console.log('tencent:')
 var urls = [
     'https://v.qq.com/x/cover/kruhigtunugwbab/x0023osxaj9.html',//最强大脑
     'https://v.qq.com/x/cover/4n8r5plkg2t1sb5/v0022zox2oi.html',
@@ -14,6 +14,8 @@ var urls = [
     'https://v.qq.com/x/cover/9b9x1xqtag90i8o/d002378iabz.html',//中国式相亲
     'https://v.qq.com/x/cover/kruhigtunugwbab/x0023osxaj9.html', //最强大脑
     'https://v.qq.com/x/cover/orjl6thbzv1woid/v0023lkhsmf.html',//放开我北鼻'
+    'https://v.qq.com/x/cover/l8vvq6441lqp32d/l002335vnkt.html',//拜托了冰箱
+    'https://v.qq.com/x/cover/0wy7ceoiax7r3ao/i0023bae20f.html',//高能少年团
 ]
 urls.forEach(function(url){
     superagent.get(url).end(function (err, res) {
