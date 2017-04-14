@@ -1,6 +1,6 @@
 var superagent = require('superagent')
 var cheerio = require('cheerio')
-
+console.log('iqiyi: ')
 var urls = [
     'http://www.iqiyi.com/v_19rraakn18.html',//歌手
     'http://www.iqiyi.com/v_19rraa904k.html',//奇葩大会
