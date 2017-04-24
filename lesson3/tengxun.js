@@ -12,10 +12,15 @@ var urls = [
     'https://v.qq.com/x/cover/zd8gebdiid269c6/o00230b2yvz.html',//王牌对王牌
     'https://v.qq.com/x/cover/pngwi7jiyp3sw0b/w00224hx300.html',
     'https://v.qq.com/x/cover/9b9x1xqtag90i8o/d002378iabz.html',//中国式相亲
-    'https://v.qq.com/x/cover/kruhigtunugwbab/x0023osxaj9.html', //最强大脑
-    'https://v.qq.com/x/cover/orjl6thbzv1woid/v0023lkhsmf.html',//放开我北鼻'
+    'https://v.qq.com/x/cover/kruhigtunugwbab/x0023osxaj9.html',//最强大脑
+    'https://v.qq.com/x/cover/orjl6thbzv1woid/v0023lkhsmf.html',//放开我北鼻
     'https://v.qq.com/x/cover/l8vvq6441lqp32d/l002335vnkt.html',//拜托了冰箱
     'https://v.qq.com/x/cover/0wy7ceoiax7r3ao/i0023bae20f.html',//高能少年团
+    'https://v.qq.com/x/cover/l8vvq6441lqp32d/l002335vnkt.html',//拜托了冰箱
+    'https://v.qq.com/x/cover/um5it8gba6jden2/x0023f9vzp7.html',//奔跑吧
+    'https://v.qq.com/x/cover/co6o7vvd3dp4tg3/u0023ldkp4k.html',//金曲捞
+    'https://v.qq.com/x/cover/01tn45w64lygzhr/j0023wdemll.html',//诗书中华
+    'https://v.qq.com/x/cover/ga12wc6c1wd51kk/p0023u3mawj.html',//跨界歌王
 ]
 urls.forEach(function(url){
     superagent.get(url).end(function (err, res) {
@@ -37,10 +42,14 @@ urls.forEach(function(url){
             count ++
         })
         console.log({
-            title: $('.album_title').text(),
+            title: trim($('.album_title').text()),
             channel: '',
             total: total,
             count: count
         })
     })
 })
+function trim(str)
+{
+    return str.replace(/(^\s*)|(\s*$)|([\r\n])|(\ +)/g, "");
+}

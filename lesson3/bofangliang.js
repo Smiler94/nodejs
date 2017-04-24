@@ -17,6 +17,10 @@ var urls = [
     'http://www.iqiyi.com/v_19rrb46nvs.html',//奇葩说
     'http://www.iqiyi.com/v_19rrb49384.html',//高能少年团
     'http://www.iqiyi.com/v_19rrb49gmw.html',//天生是优我
+    'http://www.iqiyi.com/v_19rrb9zhlo.html',//奔跑吧
+    'http://www.iqiyi.com/v_19rrb963ys.html',//金曲捞
+    'http://www.iqiyi.com/v_19rrb963b0.html',//诗书中华
+    'http://www.iqiyi.com/v_19rrb963b0.html',//跨界歌王
 ]
 urls.forEach(function(url){
     superagent.get(url).end(function (err, res) {
@@ -34,6 +38,7 @@ urls.forEach(function(url){
             a.forEach(function(id) {
                 ids.push(id.replace('"tvQipuId":',''))
             })
+            // console.log(ids)
             var count_url = 'http://cache.video.qiyi.com/jp/pc/'+ids.join(',')+'/'
             superagent.get(count_url).end(function(err, res) {
                 var counts = eval(trim(err.rawResponse.replace('var tvInfoJs=','')))
