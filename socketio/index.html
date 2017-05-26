@@ -1,0 +1,38 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link href="https://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<script>
+    var socket = io('http://localhost:3000');
+    $(function(){
+        socket.on('news', function (data) {
+            $('#msg_body').append(data+'<br/>')
+        });
+        socket.on('leave', function (data) {
+            $('#msg_body').append('<span style="color:red">'+data+'<br/>')
+        })
+        $('#sen_btn').click(function(){
+            socket.emit('new', $('#input').val());
+            $('#input').val('');
+        })
+        $('#input').keydown(function(e) {
+            if (e.keyCode == 13) {
+                socket.emit('new', $(this).val());
+                $(this).val('');
+            }
+        })
+    })
+</script>
+<style>
+    #msg_body{ height:94%;overflow-y: auto;border:1px solid black;padding:10px;border-radius:4px; }
+    #bottom{ height:5%; }
+    #bottom div{ float:left; }
+    #input{ float:left;border:2px solid black;border-radius:4px;height:34px;line-height:34px;width:95%; }
+</style>
+<body>
+    <div id="msg_body"></div>
+    <div id="bottom">
+        <input id="input">
+        <div id="sen_btn" class="btn btn-primary">Send</div>
+    </div>
+</body>

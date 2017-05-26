@@ -13,7 +13,7 @@ var urls =[
     "http://www.iqiyi.com/a_19rrha7gsl.html",//最强大脑
     "http://www.iqiyi.com/a_19rrha0p0p.html",//我们十七岁
     "http://www.iqiyi.com/a_19rrh94xyt.html",//熟悉的味道
-    "http://www.iqiyi.com/a_19rrha2i0t.html"//跨界冰雪王
+    "http://www.iqiyi.com/a_19rrha2i0t.html",//跨界冰雪王
 ]
 
 var url2 = [
